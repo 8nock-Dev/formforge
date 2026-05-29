@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-font-smoothing: antialiased; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #F5F5FF;
+    color: #1E1B4B;
+  }
+}
+
+@layer utilities {
+  .font-display { font-family: 'Syne', sans-serif; }
+  .font-mono    { font-family: 'JetBrains Mono', monospace; }
+}
+
+/* Code block */
+.code-block {
+  background: #0F0F1A;
+  color: #E2E8F0;
+  border-radius: 10px;
+  padding: 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+.code-block .token-key    { color: #93C5FD; }
+.code-block .token-str    { color: #86EFAC; }
+.code-block .token-comment{ color: #64748B; }
+.code-block .token-tag    { color: #F9A8D4; }
+.code-block .token-attr   { color: #FCD34D; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #C7D2FE; border-radius: 3px; }
